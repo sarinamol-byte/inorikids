@@ -238,6 +238,23 @@ def faqs(key, default):
     items = _FAQS.get(key, _faq_defaults[key])
     return [(i['question'], i['answer']) for i in items if i.get('question') and i.get('answer')]
 
+_RANGE_FILE = os.path.join(CONTENT, 'ranges.json')
+_RANGES = json.load(open(_RANGE_FILE, encoding='utf-8')) if os.path.exists(_RANGE_FILE) else {}
+_range_defaults = {}
+def ranges(key, default):
+    """Product-range cards: title, text, optional photo, label. Editable in the CMS."""
+    _range_defaults[key] = [{'title': it[0], 'text': it[1],
+                             'image': f'img/{it[2]}.webp' if len(it) > 2 and it[2] else '',
+                             'image_description': it[3] if len(it) > 3 and it[3] else '',
+                             'label': it[4] if len(it) > 4 else ''} for it in default]
+    out = []
+    for i in _RANGES.get(key, _range_defaults[key]):
+        if not i.get('title'):
+            continue
+        pic = stem(i['image']) if i.get('image') else None
+        out.append((i['title'], i.get('text', ''), pic, i.get('image_description') or i['title'], i.get('label', '')))
+    return out
+
 # ---------- reusable blocks ----------
 def page_hero(eyebrow, h1, lead, im, alt, ctas=None):
     ctas = ctas or [('contact.html', 'Get a quote', ''), ('projects.html', 'See projects', 'ghost')]
@@ -447,6 +464,7 @@ o_items = [
     ('In-ground trampolines', 'Flush-mounted trampolines that sit level with the surfacing, a favourite in society play areas and school grounds.', 'blossom-aerial', 'Circular play area with blossom towers seen from above'),
     ('Safety surfacing', 'Poured EPDM rubber, rubber tiles and artificial grass, laid to the depth each piece of equipment needs for its critical fall height, in colours and patterns that suit your landscape.'),
 ]
+o_items = ranges('outdoor_play', o_items)
 o_faq = [
     ('What equipment goes into a kids play area for a housing society?', 'A typical society play area combines one combination play structure (towers, slides, climbing), a separate toddler zone, freestanding swings or spinners, and impact-absorbing safety surfacing. Larger societies add a sculptural landmark piece, an in-ground trampoline or a water play feature.'),
     ('How much space does a kids play area need?', 'Each piece of equipment needs its own footprint plus a clear safety zone around it, typically at least 1.5 to 2 metres on every side. Even a compact area can hold a small combination unit and a toddler zone; a full society play area usually needs several hundred square metres. We work out the exact layout from your site plan.'),
@@ -493,6 +511,7 @@ i_items = [
     ('Play cafés and family centres', 'Kids cafés and family play centres with play, seating and parent areas planned together. Our partners have designed municipal kids cafés in Seoul.'),
     ('Interactive and digital play', 'Smart play content and interactive learning play, including coding play, for edutainment centres and libraries.'),
 ]
+i_items = ranges('indoor_play', i_items)
 i_faq = [
     ('What is an indoor play area?', 'An indoor play area is a climate-controlled play space inside a building, such as a mall, clubhouse, hotel, preschool or play café, fitted with play frames, slides, climbing nets and soft play on safe flooring. It lets children play year-round regardless of heat, rain or pollution.'),
     ('How much floor area does a kids indoor play area need?', 'A clubhouse kids room can work in a few hundred square feet; a mall play zone or play café usually needs a few thousand. Ceiling height matters as much as floor area, because double-height spaces allow multi-level net towers. We plan to your floor plate.'),
@@ -538,6 +557,7 @@ l_items = [
     ('Smart street furniture', 'Smart benches, sharing booths and IoT-enabled street furniture for connected campuses and public spaces.'),
     ('Bollards, planters and enclosures', 'Bollards, planters and waste and recycling enclosures that keep a landscape consistent down to the details.'),
 ]
+l_items = ranges('landscape_furniture', l_items)
 l_faq = [
     ('What is landscape furniture?', 'Landscape furniture, also called site furniture or street furniture, is the fixed outdoor furniture in a landscape: benches, pergolas, pavilions, shelters, planters, bollards and public art. It makes outdoor spaces comfortable and gives them a recognisable identity.'),
     ('What is the difference between a pergola and a pavilion?', 'A pergola is an open frame of posts and beams, sometimes with slats or a light canopy, that gives partial shade and defines a walkway or seating area. A pavilion is a fully roofed structure, sometimes enclosed with glass, that gives full shelter and can be used as a lounge, tea house or meeting space.'),
@@ -578,6 +598,7 @@ g_items = [
     ('Smart fitness for children', 'App-connected fitness play that turns exercise into interactive games for children.', None, None, 'Children'),
     ('Fitness packages and layouts', 'Planned sets of stations for a society open gym, a jogging-track circuit or a park fitness zone, with surfacing and signage.'),
 ]
+g_items = ranges('outdoor_gym', g_items)
 g_faq = [
     ('What is an open gym or outdoor gym?', 'An outdoor gym, also called an open gym, is a set of fixed, weather-proof exercise stations installed in a park, society or campus. Most stations use body weight as resistance, so they need no power, weights or supervision and are free for residents to use.'),
     ('What outdoor gym equipment should a housing society install?', 'A good society open gym combines a few strength stations (press and pull movements), one or two cardio stations such as a cross-trainer, a calisthenics bar frame and at least one senior-friendly balance or mobility station, placed along a walking track on rubber or turf surfacing.'),
@@ -618,6 +639,7 @@ k_items = [
     ('Learning-space themes', 'Furniture sets for reading forests, block-play tables, art ateliers, maker spaces and role-play rooms.'),
     ('Library and play café furniture', 'Reading nooks, book displays and seating for toy libraries, little libraries and kids cafés.'),
 ]
+k_items = ranges('kids_furniture', k_items)
 k_faq = [
     ('What furniture does a preschool or daycare need?', 'Child-height tables and chairs for each age group, low open shelving and storage children can reach, a reading corner, role-play furniture such as a play kitchen, and soft seating. We plan these as themed learning areas: reading, blocks, art, making and role play.'),
     ('What material is your kids furniture made from?', 'Premium SE0-grade birch plywood with extremely low formaldehyde emission, designed and made in-house in Korea.'),
@@ -953,6 +975,8 @@ open(f'{OUT}/site.webmanifest', 'w').write(json.dumps({'name': 'Inori Kids', 'sh
 for path, data in _created.items():
     os.makedirs(os.path.dirname(path), exist_ok=True)
     json.dump(data, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+if not os.path.exists(_RANGE_FILE):
+    json.dump(_range_defaults, open(_RANGE_FILE, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
 if not os.path.exists(_FAQ_FILE):
     json.dump(_faq_defaults, open(_FAQ_FILE, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
 print('built', len(PAGES), 'pages into', OUT)

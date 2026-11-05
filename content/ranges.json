@@ -1,0 +1,292 @@
+{
+  "outdoor_play": [
+    {
+      "title": "Combination play structures",
+      "text": "Multi-level play towers with decks, bridges, slides, climbing walls and nets, sized for ages 2–5, 5–12 or both. The core of most society and school play areas.",
+      "image": "img/lookout.webp",
+      "image_description": "Play tower with tube slide, net bridge and in-ground trampoline",
+      "label": "Play systems"
+    },
+    {
+      "title": "Sculptural and themed play",
+      "text": "Animal, art and signature play series: faceted unicorns, reindeer and tigers that children climb through and slide down. A play area that doubles as public art.",
+      "image": "img/unicorn.webp",
+      "image_description": "Faceted white unicorn climbing structure",
+      "label": "Signature · Art · Animal series"
+    },
+    {
+      "title": "Rope and net climbing",
+      "text": "Rope towers, climbing nets, net tunnels and space-net frames that build strength and coordination and suit a wide age range.",
+      "image": "img/ant-tower.webp",
+      "image_description": "Net climbing frame with tube slide and ant sculptures",
+      "label": "Rope play series"
+    },
+    {
+      "title": "Nature and timber play",
+      "text": "Robinia timber play, log balance trails and forest-style play that blend into green landscapes and podium gardens.",
+      "image": "img/pinecones.webp",
+      "image_description": "Timber and steel ring play deck with pinecone towers",
+      "label": "Robinia play series"
+    },
+    {
+      "title": "Slides, swings, spinners and springers",
+      "text": "Freestanding classics: straight, wave, tube and spiral slides, swings, spinners, rockers and springers to complete a play area or fill a smaller corner.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Toddler play zones",
+      "text": "Low-height play houses, crawl tunnels, sensory panels and small slides for ages 1–5, set apart from older children's equipment.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Inclusive play",
+      "text": "Ground-level play, wide transfer platforms, accessible routes and sensory elements so children of all abilities can play together. Available on request, planned with your project team.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Water play",
+      "text": "Splash pads, water tables and interactive water play structures, from small features to destination water play zones. Available on request: we work with your project team, with the water connection and drainage in your scope.",
+      "image": "",
+      "image_description": "",
+      "label": "On request"
+    },
+    {
+      "title": "In-ground trampolines",
+      "text": "Flush-mounted trampolines that sit level with the surfacing, a favourite in society play areas and school grounds.",
+      "image": "img/blossom-aerial.webp",
+      "image_description": "Circular play area with blossom towers seen from above",
+      "label": ""
+    },
+    {
+      "title": "Safety surfacing",
+      "text": "Poured EPDM rubber, rubber tiles and artificial grass, laid to the depth each piece of equipment needs for its critical fall height, in colours and patterns that suit your landscape.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    }
+  ],
+  "indoor_play": [
+    {
+      "title": "Multi-level net towers",
+      "text": "Two- and three-storey play frames with climbing nets, spiral routes and lookouts, built to make the most of double-height atriums.",
+      "image": "img/in-spiral-tower.webp",
+      "image_description": "Spiral net play tower rising through a double-height atrium",
+      "label": "Play frames"
+    },
+    {
+      "title": "Themed play landscapes",
+      "text": "Treehouses, cloud trees and forest hills that turn a whole room into one immersive play scene.",
+      "image": "img/in-net-tree.webp",
+      "image_description": "Indoor play hall with a giant green net treehouse, climbing hill and rope bridge",
+      "label": "Themed interiors"
+    },
+    {
+      "title": "Tube and spiral slides",
+      "text": "Clear and coloured tube slides that link levels and give every structure its signature moment.",
+      "image": "img/in-cloud-slide.webp",
+      "image_description": "Brown tube slides curving down from a cloud tree play structure",
+      "label": "Slides"
+    },
+    {
+      "title": "Soft play and toddler zones",
+      "text": "Padded hedges, tunnels, mirrors and low climbers for babies and toddlers, kept apart from older children.",
+      "image": "img/in-hedges.webp",
+      "image_description": "Soft play zone with green hedge shapes and a yellow tube slide",
+      "label": "Ages 1–5"
+    },
+    {
+      "title": "Indoor trampolines and net bridges",
+      "text": "In-floor trampolines, net bridges and high-level walkways for active play in malls and play centres.",
+      "image": "img/in-trampoline.webp",
+      "image_description": "Indoor trampolines beside a yellow play house and net bridge",
+      "label": "Active play"
+    },
+    {
+      "title": "Clubhouse kids rooms",
+      "text": "Complete kids rooms for residential clubhouses: play structure, reading corner, role play and furniture designed as one space.",
+      "image": "img/indoor-tree-slide-childcare.webp",
+      "image_description": "Indoor play room with a timber tree, climbing hill and twin slides",
+      "label": "Residential"
+    },
+    {
+      "title": "Play cafés and family centres",
+      "text": "Kids cafés and family play centres with play, seating and parent areas planned together. Our partners have designed municipal kids cafés in Seoul.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Interactive and digital play",
+      "text": "Smart play content and interactive learning play, including coding play, for edutainment centres and libraries.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    }
+  ],
+  "landscape_furniture": [
+    {
+      "title": "Pavilions and community lounges",
+      "text": "Architectural pavilions for gathering, reading or waiting, such as Dramatic Circle, a curved, lit community lounge in an IPARK residential complex.",
+      "image": "img/dramatic-circle.webp",
+      "image_description": "Curved white lounge pavilion lit at night",
+      "label": "Pavilion series"
+    },
+    {
+      "title": "Tea houses and garden cafés",
+      "text": "Glazed tea houses, terrace cafés and garden houses that turn a landscape into a usable outdoor room.",
+      "image": "img/wormhole-teahouse.webp",
+      "image_description": "White slatted tea house with outdoor seating on a lawn",
+      "label": ""
+    },
+    {
+      "title": "Pergolas",
+      "text": "Timber, steel and aluminium pergolas designed to your space, from compact 2 m modules to 20 m walkways.",
+      "image": "img/ocean-pergola.webp",
+      "image_description": "Timber and white pergola on a seafront lawn",
+      "label": "Pergola series"
+    },
+    {
+      "title": "Sculptural canopies",
+      "text": "Petal, ribbon and shell-shaped canopies that give shade and a focal point at the same time.",
+      "image": "img/flower-petal.webp",
+      "image_description": "White petal-shaped canopy over garden seating",
+      "label": "Public art"
+    },
+    {
+      "title": "Benches and seating",
+      "text": "Park benches, low platform benches, seat walls and picnic tables in timber, steel and composite finishes.",
+      "image": "img/low-bench.webp",
+      "image_description": "Patterned low platform bench on a lawn",
+      "label": "Bench series"
+    },
+    {
+      "title": "Public art and landmark pieces",
+      "text": "Sculptural installations such as the Pine Cone Tree House that people photograph, sit in and remember.",
+      "image": "img/pinecone-treehouse.webp",
+      "image_description": "Three woven pinecone-shaped tree houses on a lawn",
+      "label": "Public art"
+    },
+    {
+      "title": "Shelters and stations",
+      "text": "Bus and shuttle shelters, bicycle shelters and waiting stations for townships and campuses.",
+      "image": "",
+      "image_description": "",
+      "label": "Station series"
+    },
+    {
+      "title": "Colonnades and garden houses",
+      "text": "Colonnades, gabled glass garden houses and community houses for podiums and amenity gardens.",
+      "image": "img/greenery-house.webp",
+      "image_description": "Gabled glass garden house with timber cladding",
+      "label": ""
+    },
+    {
+      "title": "Smart street furniture",
+      "text": "Smart benches, sharing booths and IoT-enabled street furniture for connected campuses and public spaces.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Bollards, planters and enclosures",
+      "text": "Bollards, planters and waste and recycling enclosures that keep a landscape consistent down to the details.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    }
+  ],
+  "outdoor_gym": [
+    {
+      "title": "Strength stations",
+      "text": "Chest press, shoulder press, lat pull-down, leg press and combination stations that use body weight as resistance.",
+      "image": "img/fit-plus.webp",
+      "image_description": "Black outdoor strength stations on green rubber surfacing",
+      "label": "Strength"
+    },
+    {
+      "title": "Cardio equipment",
+      "text": "Cross-trainers, walkers and other low-impact cardio stations for walking tracks and parks.",
+      "image": "img/fitness-park.webp",
+      "image_description": "Outdoor fitness park with people exercising on stations and a running track",
+      "label": ""
+    },
+    {
+      "title": "Senior fitness",
+      "text": "Gentle balance, flexibility and mobility stations designed for older residents.",
+      "image": "img/flexo-senior.webp",
+      "image_description": "Yellow and black senior fitness stations in a garden",
+      "label": "Seniors"
+    },
+    {
+      "title": "Calisthenics and bar frames",
+      "text": "Pull-up bars, push-up frames, parallel bars and multi-station rigs for body-weight training.",
+      "image": "img/cw-fitness-frame.webp",
+      "image_description": "Coloured push-up and pull-up frames along a garden path",
+      "label": "Body weight"
+    },
+    {
+      "title": "Smart fitness for children",
+      "text": "App-connected fitness play that turns exercise into interactive games for children.",
+      "image": "",
+      "image_description": "",
+      "label": "Children"
+    },
+    {
+      "title": "Fitness packages and layouts",
+      "text": "Planned sets of stations for a society open gym, a jogging-track circuit or a park fitness zone, with surfacing and signage.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    }
+  ],
+  "kids_furniture": [
+    {
+      "title": "Preschool and daycare furniture",
+      "text": "Child-height tables, chairs, shelving and storage for classrooms and activity rooms, ",
+      "image": "img/preschool-classroom-furniture.webp",
+      "image_description": "Birch plywood preschool table, stools and shelving with toys",
+      "label": "Preschools"
+    },
+    {
+      "title": "Role-play kitchens and market stalls",
+      "text": "Play kitchens, washing machines, shop counters and market stalls for imaginative play corners.",
+      "image": "img/kids-play-kitchen-furniture.webp",
+      "image_description": "Birch plywood play kitchen and market stall furniture",
+      "label": "Role play"
+    },
+    {
+      "title": "Climbing beds and play houses",
+      "text": "Loft play houses, wall bars, arch climbers and triangle climbers that combine furniture and active play.",
+      "image": "img/laf-house-climbing-bed.webp",
+      "image_description": "Birch climbing play house with slide and arch climber",
+      "label": "Active play"
+    },
+    {
+      "title": "Kids room furniture",
+      "text": "Premium children's furniture for homes, show flats and clubhouse kids rooms: low shelves, tables, cribs and storage.",
+      "image": "img/laflaf-kids-room-furniture.webp",
+      "image_description": "Toddlers playing in a kids room with birch shelving and table",
+      "label": "Kids rooms"
+    },
+    {
+      "title": "Learning-space themes",
+      "text": "Furniture sets for reading forests, block-play tables, art ateliers, maker spaces and role-play rooms.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    },
+    {
+      "title": "Library and play café furniture",
+      "text": "Reading nooks, book displays and seating for toy libraries, little libraries and kids cafés.",
+      "image": "",
+      "image_description": "",
+      "label": ""
+    }
+  ]
+}
