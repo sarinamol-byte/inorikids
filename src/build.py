@@ -102,7 +102,7 @@ ORG = {
     '@type': 'Organization', '@id': ORG_ID, 'name': 'Inori Kids', 'alternateName': ['iNori Kids', 'inorikids'],
     'url': SITE + '/', 'logo': {'@type': 'ImageObject', 'url': SITE + '/logo-512.png', 'width': 512, 'height': 512},
     'image': SITE + '/og-image.jpg',
-    'description': 'Indian company bringing world-class kids play areas, indoor play solutions, landscape furniture, pavilions, kids furniture and outdoor gym equipment to India, in partnership with Chungwoo Funstation, Spacetalk and Ittang of South Korea. Design, import, installation and guarantee.',
+    'description': 'Indian company partnered with Chungwoo Funstation of South Korea (with sister companies Spacetalk and Ittang), bringing world-class kids play areas, indoor play, landscape furniture, pavilions, kids furniture and outdoor gym equipment from Korea to India. Design, import, installation and guarantee.',
     'address': {'@type': 'PostalAddress', 'addressLocality': 'Gurugram', 'addressRegion': 'Haryana', 'addressCountry': 'IN'},
     'areaServed': {'@type': 'Country', 'name': 'India'},
     'sameAs': [IG, LI],
@@ -149,7 +149,7 @@ def footer():
     <div class="fgrid">
       <div style="display:grid;gap:12px;align-content:start">
         <a class="logo" href="./" aria-label="Inori Kids home" style="font-size:1.2rem">{MARK}nori <span>kids</span></a>
-        <p>World-class kids play areas, indoor play, landscape furniture, kids furniture and outdoor gym equipment, designed with leading Korean studios and installed and guaranteed in India.</p><p>Gurugram, Haryana, India</p>
+        <p>An Indian company partnered with Chungwoo Funstation, Korea, bringing world-class kids play areas, landscape and recreational solutions to India.</p><p>Gurugram, Haryana, India</p>
       </div>
       <div><h2>Solutions</h2><ul>
         <li><a href="outdoor-play-areas.html">Kids play areas</a></li>
@@ -302,8 +302,18 @@ STANDARDS = ('Our play equipment carries EN 1176 and ASTM international safety c
              'for children\'s products. Every installation is planned with safety zones and impact-absorbing '
              'surfacing matched to the critical fall height of each piece.')
 
-TIE = ('Inori Kids is an Indian company bringing world-class play and landscape solutions to India. We have tied up with Chungwoo Funstation, '
-       'Spacetalk and Ittang of South Korea to bring the best designs and materials to India.')
+TIE = ('Inori Kids is an Indian company, partnered with Chungwoo Funstation of South Korea, bringing world-class kids play areas, '
+       'landscape and recreational solutions from Korea to India. Korea is home to some of the world\'s most inventive play and landscape design, '
+       'and through the Chungwoo Funstation group (with its sister companies Spacetalk and Ittang) we bring the best of those designs and materials to Indian projects.')
+WHY_KOREA = f'''<section style="padding-top:0"><div class="wrap">
+  {head('Why Korea', 'From Korea\'s best play designers, to Indian projects.', 'Korean developers have made designed play areas and landscapes the centrepiece of residential and public projects for decades. We bring that know-how to India.')}
+  <div class="aud">
+    <div><h3>Korean design leadership</h3><p>Award-winning play, landscape and furniture design, recognised by the Red Dot, iF and Good Design awards and Korea\'s Presidential Award.</p></div>
+    <div><h3>Our partner since day one</h3><p>Chungwoo Funstation has designed and built play spaces since 1988, with its own factories and sister companies Spacetalk (landscape) and Ittang (indoor play and kids furniture).</p></div>
+    <div><h3>An Indian company</h3><p>Inori Kids is based in Gurugram. We adapt every design to Indian sites, climate and users, and handle import, installation and warranty here.</p></div>
+    <div><h3>One team for your project</h3><p>Developers and contractors deal with one accountable Indian team, from the first sketch to handover and after-sales.</p></div>
+  </div>
+</div></section>'''
 
 AWARD_PICS = [
     ('artistic-playground-reddot', 'Red Dot Award 2024', 'Artistic playground', 'Red spiral net playground with a tall red canopy in a residential courtyard'),
@@ -374,9 +384,9 @@ sol_html = ''.join(f'''<article class="sol facet"><div class="ph">{img(im, alt)}
 home_body = f'''<section class="hero"><div class="wrap">
   <div class="hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">World-class play and landscape solutions, made for India</p>
+      <p class="eyebrow">An Indian company · Partnered with Chungwoo Funstation, Korea</p>
       <h1>Kids play areas that become <em>landmarks</em>.</h1>
-      <p class="lead">A kids play area solution provider for developers and contractors. Give us your space and your design intent; we design the play area, landscape or open gym around it with our award-winning Korean design partners, then install and guarantee it in India.</p>
+      <p class="lead">We bring world-class kids play areas, landscape and recreational solutions from South Korea to India. Developers and contractors give us their space and design intent; we design the solution around it with our Korean partners, then install and guarantee it here.</p>
       <div class="hero-actions"><a class="btn" href="contact.html">Discuss your project</a><a class="btn ghost" href="projects.html">See the work</a></div>
     </div>
     <div class="hero-media">
@@ -414,7 +424,8 @@ home_body = f'''<section class="hero"><div class="wrap">
     <figure><div class="ph facet">{img('pinecones', 'Circular elevated play deck with pinecone towers at night')}</div><figcaption><b>Playing with Pinecones</b><span>Residential · Korea</span></figcaption></figure>
   </div>
 </div></section>
-{awards_section(top=True, band=False)}
+{WHY_KOREA}
+{awards_section(top=False, band=False)}
 <section style="padding-top:0"><div class="wrap">
   {head('Who we work with', 'Built for the people who commission spaces.')}
   <div class="aud">
@@ -445,7 +456,7 @@ home_body = f'''<section class="hero"><div class="wrap">
 {faq_block(home_faq)}
 {cta()}'''
 page('index.html', 'Kids Play Area Design & Solutions in India | Inori Kids',
-     'Kids play areas, indoor play solutions, landscape furniture, kids furniture and outdoor gym equipment for developers, schools, malls and hotels in India. Korean-made, installed and guaranteed by Inori Kids.',
+     'Indian company partnered with Chungwoo Funstation, Korea: world-class kids play areas, indoor play, landscape furniture, kids furniture and outdoor gyms for developers, schools, malls and hotels in India.',
      home_body, [{'@type': 'WebSite', '@id': SITE + '/#website', 'url': SITE + '/', 'name': 'Inori Kids', 'publisher': {'@id': ORG_ID}, 'inLanguage': 'en-IN'},
                  faq_schema(home_faq)], trail=[('index.html', 'Home')])
 
@@ -768,17 +779,18 @@ page('projects.html', 'Playground, Indoor Play & Pavilion Projects | Inori Kids'
 # =====================================================================
 # ABOUT
 # =====================================================================
-a_body = page_hero('About Inori Kids', 'World-class play and landscape solutions, brought to India',
+a_body = page_hero('About Inori Kids', 'An Indian company bringing Korea\'s best play spaces to India',
     TIE + ' We design with our partners, import, install on site and provide the guarantee in India.',
     'dramatic-circle-2', 'Curved community lounge pavilion lit at night', [('contact.html', 'Talk to us', ''), ('projects.html', 'See projects', 'ghost')]) + \
  sec(f'''<div class="prose"><div class="col"><h2>What we do</h2><p>Developers, schools, malls and hotels deal with one accountable team in India, from the first sketch to handover: design, import, installation, safety surfacing, warranty and after-sales.</p>
 <p>We are based in Gurugram, Haryana, and take on projects across India. Our first projects are bespoke concepts for residential developers, each designed around the developer\'s design intent.</p></div>
 <div class="col"><h2>Who to talk to</h2><ul><li><strong>{C1N}</strong>: {PHONE1_D}</li><li><strong>{C2N}</strong>: {PHONE2_D}</li>{f'<li><strong>Email</strong>: <a href="mailto:{EMAIL}">{EMAIL}</a></li>' if EMAIL else ''}</ul>
 <p>Follow our work on <a href="{IG}" target="_blank" rel="noopener">Instagram</a> and <a href="{LI}" target="_blank" rel="noopener">LinkedIn</a>.</p></div></div>''', top=False) + \
+ WHY_KOREA + \
  awards_section(top=False, band=False) + \
  sec('''<div class="trust"><span>EN 1176</span><span>ASTM</span><span>KC</span><span>ISO</span><span>Red Dot Design Award</span><span>iF Design Award</span><span>Asia Design Prize</span><span>Good Design Award</span></div>''', top=False) + cta()
 page('about.html', 'About Inori Kids | World-Class Play Spaces for India',
-     'Inori Kids is an Indian company bringing award-winning play areas, landscape furniture and outdoor gyms to India with Chungwoo Funstation, Spacetalk and Ittang of South Korea. Based in Gurugram.',
+     'Inori Kids is an Indian company partnered with Chungwoo Funstation of South Korea, bringing award-winning play areas, landscape furniture and outdoor gyms from Korea to India. Based in Gurugram.',
      a_body, [{'@type': 'AboutPage', 'name': 'About Inori Kids', 'url': url('about.html')}],
      trail=[('index.html', 'Home'), ('about.html', 'About')], ogimg='dramatic-circle-2.webp')
 
@@ -956,7 +968,7 @@ Sitemap: {SITE}/sitemap.xml
 ''')
 llms = f'''# Inori Kids
 
-> Inori Kids (inorikids.com) is an Indian company bringing world-class play and landscape solutions to India, in partnership with Chungwoo Funstation, Spacetalk and Ittang of South Korea. It designs, imports, installs and guarantees kids play areas, playground equipment, kids indoor play areas, landscape furniture (pergolas, pavilions, benches, public art), kids furniture and outdoor gym equipment for residential developers, housing societies, schools, malls and hotels in India. A design-led solution provider: clients give the space, Inori Kids designs the solution around it. Based in Gurugram, Haryana, India. Projects across India.
+> Inori Kids (inorikids.com) is an Indian company partnered with Chungwoo Funstation of South Korea (with sister companies Spacetalk and Ittang), bringing world-class kids play areas, landscape and recreational solutions from Korea to India. It designs, imports, installs and guarantees kids play areas, playground equipment, kids indoor play areas, landscape furniture (pergolas, pavilions, benches, public art), kids furniture and outdoor gym equipment for residential developers, housing societies, schools, malls and hotels in India. A design-led solution provider: clients give the space, Inori Kids designs the solution around it. Based in Gurugram, Haryana, India. Projects across India.
 
 Contact: {C1N} {PHONE1_D} · {C2N} {PHONE2_D} · {('Email ' + EMAIL + ' · ') if EMAIL else ''} Instagram {IG} · LinkedIn {LI}
 
