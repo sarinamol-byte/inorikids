@@ -10,18 +10,17 @@ Static website for Inori Kids. Content is edited in **Pages CMS**; every save re
 | `static/img/` | Photos (uploads from the CMS land here; JPG and PNG are converted to WebP automatically) | You, through Pages CMS |
 | `src/` | Page templates, styles and the build script | Developer |
 
-On every change to `main`, the GitHub Action **Build and publish** runs `src/build.py`, puts the finished site on the `live` branch and asks Hostinger to pull it.
+On every change to `main`, the GitHub Action **Build and publish** runs `src/build.py`, puts the finished site on the `live` branch and Cloudflare deploys it to inorikids.com.
 
 ## One-time setup
 
 1. **Pages CMS:** go to https://app.pagescms.org, sign in with GitHub, choose this repository. Add collaborators (e.g. Hosung) under Settings → Collaborators.
-2. **Hostinger:** hPanel → Websites → inorikids.com → Advanced → **Git**.
-   - Repository: `https://github.com/<owner>/<repo>.git`
+2. **Cloudflare (hosting):** the Cloudflare Worker named `inorikids` serves inorikids.com. In Cloudflare → Workers & Pages → inorikids → Settings → Build, connect this repository with:
    - Branch: `live`
-   - Directory: leave empty (deploys to `public_html`)
-   - Create, then turn on **Auto deployment** and copy the webhook URL.
-3. **Webhook secret:** in GitHub → this repo → Settings → Secrets and variables → Actions → New repository secret, name `HOSTINGER_WEBHOOK`, value = the URL from step 2.
-4. Back up and remove any old files in `public_html` before the first deploy if Hostinger asks for an empty folder.
+   - Build command: *(empty)*
+   - Deploy command: `npx wrangler deploy`
+   - Root directory: `/`
+   The `wrangler.jsonc` file in `static/` is copied to the `live` branch and tells Cloudflare to serve the files as they are.
 
 ## Everyday editing
 
