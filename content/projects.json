@@ -1,244 +1,347 @@
 {
   "items": [
     {
+      "image": "img/kraken-island-water-play.jpg",
+      "title": "Kraken Island interactive water play",
+      "project": "Seoul Land, 2024",
+      "location": "Gwacheon, Gyeonggi",
+      "category": "outdoor"
+    },
+    {
       "image": "img/unicorn.webp",
-      "category": "outdoor",
-      "title": "Unicorn sculptural climber"
+      "title": "Unicorn sculptural climber",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/reindeer.webp",
-      "category": "outdoor",
-      "title": "Blue Reindeer play tower"
+      "title": "Blue Reindeer play tower",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/pinecones.webp",
-      "category": "outdoor",
-      "title": "Playing with Pinecones play ring"
+      "title": "Playing with Pinecones play ring",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/tiger.webp",
-      "category": "outdoor",
-      "title": "White Tiger play structure"
+      "title": "White Tiger play structure",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/ant-tower.webp",
-      "category": "outdoor",
-      "title": "Ant Colony net play frame"
+      "title": "Ant Colony net play frame",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/lookout.webp",
-      "category": "outdoor",
-      "title": "Lookout tower with in-ground trampoline"
+      "title": "Lookout tower with in-ground trampoline",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/blossom-aerial.webp",
-      "category": "outdoor",
-      "title": "Blossom courtyard kids play area"
+      "title": "Blossom courtyard kids play area",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/water-play-stingray.jpg",
-      "category": "outdoor",
-      "title": "Stingray Family water play"
+      "title": "Stingray Family Water Play",
+      "project": "West Chungju Prugio The First",
+      "location": "Chungju, Chungbuk",
+      "category": "outdoor"
     },
     {
       "image": "img/inclusive-playground-everyones-net.jpg",
-      "category": "outdoor",
-      "title": "Everyone's Net inclusive playground"
+      "title": "Everyone's Net",
+      "project": "Gwangnaru Hangang Park Inclusive Playground",
+      "location": "Seoul",
+      "category": "outdoor"
     },
     {
       "image": "img/stainless-tube-slide-tower.jpg",
-      "category": "outdoor",
-      "title": "Tower with stainless spiral slide"
+      "title": "Tower Combination",
+      "project": "Daegu Samju Children's Park",
+      "location": "Daegu",
+      "category": "outdoor"
     },
     {
       "image": "img/safety-surfacing-epdm-blue-gate.jpg",
-      "category": "outdoor",
-      "title": "Blue Gate Net with patterned safety surfacing"
+      "title": "Blue Gate Net",
+      "project": "Cheongju Technopolis Hildesheim",
+      "location": "Cheongju, Chungbuk",
+      "category": "outdoor"
     },
     {
       "image": "img/in-net-tree.webp",
-      "category": "indoor",
-      "title": "Net treehouse indoor play hall"
+      "title": "Net treehouse indoor play hall",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/in-spiral-tower.webp",
-      "category": "indoor",
-      "title": "Spiral net tower in an atrium"
+      "title": "Spiral net tower in an atrium",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/in-tree-pillar.webp",
-      "category": "indoor",
-      "title": "Tree pillar toddler zone"
+      "title": "Tree pillar toddler zone",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/in-cloud-slide.webp",
-      "category": "indoor",
-      "title": "Cloud tree with tube slides"
+      "title": "Cloud tree with tube slides",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/in-hedges.webp",
-      "category": "indoor",
-      "title": "Hedge maze soft play"
+      "title": "Hedge maze soft play",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/in-trampoline.webp",
-      "category": "indoor",
-      "title": "Indoor trampolines and net bridge"
+      "title": "Indoor trampolines and net bridge",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/indoor-tree-slide-childcare.webp",
-      "category": "indoor",
-      "title": "Childcare centre play room with timber tree and slides"
+      "title": "Timber tree play room",
+      "project": "Seongnam City Childcare Support Center",
+      "location": "Seongnam, Gyeonggi",
+      "category": "indoor"
     },
     {
       "image": "img/dramatic-circle.webp",
-      "category": "pavilion",
-      "title": "Dramatic Circle community lounge pavilion"
+      "title": "Dramatic Circle",
+      "project": "THE H FIRSTIER IPARK, 2023",
+      "location": "Seoul",
+      "category": "pavilion"
     },
     {
       "image": "img/dramatic-circle-2.webp",
-      "category": "pavilion",
-      "title": "Dramatic Circle at night"
+      "title": "Dramatic Circle at night",
+      "project": "THE H FIRSTIER IPARK, 2023",
+      "location": "Seoul",
+      "category": "pavilion"
     },
     {
       "image": "img/pinecone-treehouse.webp",
-      "category": "pavilion",
-      "title": "Pine Cone Tree House"
+      "title": "Pine Cone Tree House",
+      "project": "Seokjeong Park, Hwaseong Parkdream",
+      "location": "Pyeongtaek, Gyeonggi",
+      "category": "pavilion"
     },
     {
       "image": "img/flower-petal.webp",
-      "category": "pavilion",
-      "title": "Flower Petal Garden canopy"
+      "title": "Flower Petal Garden",
+      "project": "Gimcheon Prugio The First",
+      "location": "Gimcheon, Gyeongbuk",
+      "category": "pavilion"
     },
     {
       "image": "img/wormhole-teahouse.webp",
-      "category": "pavilion",
-      "title": "Wormhole Tea House"
+      "title": "Wormhole Tea House",
+      "project": "Gumi Prugio Eliforet City",
+      "location": "Gumi, Gyeongbuk",
+      "category": "pavilion"
     },
     {
       "image": "img/wormhole-cafe.webp",
-      "category": "pavilion",
-      "title": "Wormhole Terrace Cafe"
+      "title": "Wormhole Terrace Cafe",
+      "project": "Anyang Station Prugio The Shop",
+      "location": "Anyang, Gyeonggi",
+      "category": "pavilion"
     },
     {
       "image": "img/greenery-house.webp",
-      "category": "pavilion",
-      "title": "Greenery House"
+      "title": "Greenery House",
+      "project": "Ansan Prugio Bri-park",
+      "location": "Ansan, Gyeonggi",
+      "category": "pavilion"
     },
     {
       "image": "img/ocean-pergola.webp",
-      "category": "pavilion",
-      "title": "Ocean Scent Pergola"
+      "title": "Ocean Scent Pergola",
+      "project": "Pohang Prugio Marine City",
+      "location": "Pohang, Gyeongbuk",
+      "category": "pavilion"
     },
     {
       "image": "img/glass-pavilion.webp",
-      "category": "pavilion",
-      "title": "Glass garden pavilion"
+      "title": "Glass garden pavilion",
+      "project": "",
+      "location": "South Korea",
+      "category": "pavilion"
     },
     {
       "image": "img/cw-pavilion.webp",
-      "category": "pavilion",
-      "title": "Garden lounge pavilion"
+      "title": "Garden lounge pavilion",
+      "project": "",
+      "location": "South Korea",
+      "category": "pavilion"
     },
     {
       "image": "img/yellow-pergola.webp",
-      "category": "pavilion",
-      "title": "Curved slat pergola"
+      "title": "Curved slat pergola",
+      "project": "",
+      "location": "South Korea",
+      "category": "pavilion"
     },
     {
       "image": "img/low-bench.webp",
-      "category": "pavilion",
-      "title": "Patterned low bench"
+      "title": "Patterned Low Bench",
+      "project": "Gise No. 1 & 2 Small Park",
+      "location": "Daegu",
+      "category": "pavilion"
     },
     {
       "image": "img/fit-plus.webp",
-      "category": "fitness",
-      "title": "Outdoor gym stations"
+      "title": "FIT+ smart outdoor fitness",
+      "project": "Gosan No. 1 Children's Park",
+      "location": "Gwangju, Gyeonggi",
+      "category": "fitness"
     },
     {
       "image": "img/flexo-senior.webp",
-      "category": "fitness",
-      "title": "Senior fitness stations"
+      "title": "FLEXO senior fitness",
+      "project": "Cheongju Technopolis Hildesheim",
+      "location": "Cheongju, Chungbuk",
+      "category": "fitness"
     },
     {
       "image": "img/cw-fitness-frame.webp",
-      "category": "fitness",
-      "title": "Fitness frames along a garden walk"
+      "title": "Fitness frames along a garden walk",
+      "project": "",
+      "location": "South Korea",
+      "category": "fitness"
     },
     {
       "image": "img/fitness-park.webp",
-      "category": "fitness",
-      "title": "Outdoor fitness park"
+      "title": "Outdoor fitness park",
+      "project": "Concept design",
+      "location": "",
+      "category": "fitness"
     },
     {
       "image": "img/kids-play-kitchen-furniture.webp",
-      "category": "furniture",
-      "title": "Preschool play kitchen furniture"
+      "title": "Preschool play kitchen furniture",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     },
     {
       "image": "img/laflaf-kids-room-furniture.webp",
-      "category": "furniture",
-      "title": "Kids room furniture"
+      "title": "Kids room furniture",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     },
     {
       "image": "img/laf-house-climbing-bed.webp",
-      "category": "furniture",
-      "title": "Climbing play house"
+      "title": "Climbing play house",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     },
     {
       "image": "img/preschool-classroom-furniture.webp",
-      "category": "furniture",
-      "title": "Preschool furniture"
+      "title": "Preschool furniture",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     },
     {
       "image": "img/artistic-playground-reddot.webp",
-      "category": "outdoor",
-      "title": "Red Dot Award 2024 artistic playground"
+      "title": "Artistic Adventure · Red Dot 2024",
+      "project": "Daechi Prugio Summit",
+      "location": "Seoul",
+      "category": "outdoor"
     },
     {
       "image": "img/arcloud-reddot.webp",
-      "category": "pavilion",
-      "title": "Red Dot Award 2024 Arcloud canopy"
+      "title": "Art Cloud · Red Dot 2024",
+      "project": "Hanam Gamil Prugio Markber",
+      "location": "Hanam, Gyeonggi",
+      "category": "pavilion"
     },
     {
       "image": "img/award-presidential-sanmaru.webp",
-      "category": "outdoor",
-      "title": "Presidential Award 2019 Sanmaru Playground"
+      "title": "Sanmaru Playground · Presidential Award 2019",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/award-good-design-teahouse.webp",
-      "category": "pavilion",
-      "title": "Good Design Award 2023 teahouse"
+      "title": "Pride of Dignity Teahouse · Good Design 2023",
+      "project": "",
+      "location": "South Korea",
+      "category": "pavilion"
     },
     {
       "image": "img/award-good-design-inout.webp",
-      "category": "outdoor",
-      "title": "Good Design Award 2023 playground"
+      "title": "IN&OUT Playground · Good Design 2023",
+      "project": "",
+      "location": "South Korea",
+      "category": "outdoor"
     },
     {
       "image": "img/play-cafe-treehouse.jpg",
-      "category": "indoor",
-      "title": "Treehouse kids café"
+      "title": "Treehouse kids café",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/interactive-play-pillar.jpg",
-      "category": "indoor",
-      "title": "Interactive play pillar"
+      "title": "Interactive play pillar",
+      "project": "",
+      "location": "South Korea",
+      "category": "indoor"
     },
     {
       "image": "img/smart-sharing-booth.jpg",
-      "category": "pavilion",
-      "title": "Smart sharing booth"
+      "title": "Smart Sharing Booth",
+      "project": "World Smart City Expo",
+      "location": "KINTEX, Goyang",
+      "category": "pavilion"
     },
     {
       "image": "img/learning-space-classroom.jpg",
-      "category": "furniture",
-      "title": "Preschool learning room"
+      "title": "Preschool learning room",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     },
     {
       "image": "img/tree-library-reading-nook.jpg",
-      "category": "furniture",
-      "title": "Tree library reading nook"
+      "title": "Tree library reading nook",
+      "project": "",
+      "location": "South Korea",
+      "category": "furniture"
     }
   ]
 }

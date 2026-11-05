@@ -739,8 +739,15 @@ gal = [
  ('award-presidential-sanmaru', 'outdoor', 'Presidential Award 2019 Sanmaru Playground'), ('award-good-design-teahouse', 'pavilion', 'Good Design Award 2023 teahouse'), ('award-good-design-inout', 'outdoor', 'Good Design Award 2023 playground'),
 ]
 _pj = load('projects.json', {'items': [{'image': f'img/{f}.webp', 'category': c, 'title': t} for f, c, t in gal]})
-gal = [(stem(p['image']), p['category'], p['title']) for p in _pj['items'] if p.get('image')]
-gal_html = ''.join(f'<button type="button" data-c="{c}" aria-label="Enlarge: {E(t)}">{img(f, t + ", South Korea")}</button>' for f, c, t in gal)
+gal = [(stem(p['image']), p['category'], p['title'], p.get('project', ''), p.get('location', '')) for p in _pj['items'] if p.get('image')]
+def _gcap(t, pr, lo):
+    sub = ' · '.join(x for x in (pr, lo) if x)
+    return t, sub
+gal_html = ''.join(
+    f'<figure class="gitem" data-c="{c}"><button type="button" aria-label="Enlarge: {E(t)}" data-sub="{E(_gcap(t, pr, lo)[1])}">'
+    f'{img(f, t + (" at " + pr if pr else "") + (", " + lo if lo else ", South Korea"))}</button>'
+    f'<figcaption><b>{E(t)}</b>{f"<span>{E(_gcap(t, pr, lo)[1])}</span>" if (pr or lo) else ""}</figcaption></figure>'
+    for f, c, t, pr, lo in gal)
 p_body = f'''<section class="page-hero" style="padding-bottom:24px"><div class="wrap"><div class="hero-copy" style="max-width:820px">
 <p class="eyebrow">Project gallery</p><h1>Play areas, pavilions and open gyms by our partners</h1>
 <p class="lead">Selected work by our design team in South Korea: outdoor kids play areas, indoor play, landscape furniture, outdoor gyms and kids furniture. Our first Indian projects are in design now with residential developers.</p></div></div></section>
@@ -755,7 +762,7 @@ p_body = f'''<section class="page-hero" style="padding-bottom:24px"><div class="
 page('projects.html', 'Playground, Indoor Play & Pavilion Projects | Inori Kids',
      'Photo gallery of kids play areas, indoor play areas, pavilions, pergolas, outdoor gyms and kids furniture, including Red Dot and Good Design award winners. Available in India through Inori Kids.',
      p_body, [{'@type': 'ImageGallery', 'name': 'Inori Kids partner project gallery', 'url': url('projects.html'),
-               'image': [{'@type': 'ImageObject', 'contentUrl': f'{SITE}/img/{f}.webp', 'name': t} for f, c, t in gal]}],
+               'image': [{'@type': 'ImageObject', 'contentUrl': f'{SITE}/img/{f}.webp', 'name': t, **({'description': ', '.join(x for x in (pr, lo) if x)} if (pr or lo) else {})} for f, c, t, pr, lo in gal]}],
      trail=[('index.html', 'Home'), ('projects.html', 'Projects')], ogimg='unicorn.webp')
 
 # =====================================================================

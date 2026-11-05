@@ -23,9 +23,15 @@ content:
             label: Photo
             type: image
           - name: title
-            label: Caption
+            label: Title (shown under the photo)
             type: string
             required: true
+          - name: project
+            label: Project name (optional)
+            type: string
+          - name: location
+            label: City / region (optional)
+            type: string
           - name: category
             label: Category
             type: select

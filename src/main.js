@@ -5,10 +5,10 @@
     var btns=document.querySelectorAll('.filters button');
     btns.forEach(function(b){b.addEventListener('click',function(){
       btns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-      g.querySelectorAll('[data-c]').forEach(function(p){p.hidden=!(b.dataset.f==='all'||p.dataset.c===b.dataset.f)});
+      g.querySelectorAll('.gitem').forEach(function(p){p.hidden=!(b.dataset.f==='all'||p.dataset.c===b.dataset.f)});
     })});
     var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap'),last=null;
-    g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;last=b;var im=b.querySelector('img');li.src=im.src;li.alt=im.alt;lc.textContent=im.alt;lb.hidden=false;document.getElementById('lb-close').focus()});
+    g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;last=b;var im=b.querySelector('img');li.src=im.src;li.alt=im.alt;var fc=b.parentNode.querySelector('figcaption b');lc.textContent=fc?fc.textContent:im.alt;if(b.dataset.sub){var sp=document.createElement('span');sp.textContent=b.dataset.sub;lc.appendChild(sp)}lb.hidden=false;document.getElementById('lb-close').focus()});
     function close(){lb.hidden=true;if(last)last.focus()}
     document.getElementById('lb-close').addEventListener('click',close);
     lb.addEventListener('click',function(e){if(e.target===lb)close()});
