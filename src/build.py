@@ -108,7 +108,7 @@ ORG = {
     'sameAs': [IG, LI],
     **({'email': EMAIL} if EMAIL else {}),
     'contactPoint': [
-        {'@type': 'ContactPoint', 'telephone': PHONE1, 'contactType': 'sales', 'areaServed': 'IN', 'name': C1N},
+        {'@type': 'ContactPoint', 'telephone': PHONE1, 'contactType': 'sales', 'areaServed': 'IN', 'name': C1N, **({'email': EMAIL} if EMAIL else {})},
         {'@type': 'ContactPoint', 'telephone': PHONE2, 'contactType': 'sales', 'areaServed': 'IN', 'name': C2N},
     ],
     'knowsAbout': ['kids play area design', 'playground equipment', 'indoor play areas', 'soft play', 'landscape furniture',
@@ -296,7 +296,7 @@ def related(links):
 
 def cta(h2='Planning a play area, garden or open gym? Talk to us.'):
     return f'''<section class="cta-band"><div class="wrap"><h2>{h2}</h2><div class="acts">
-<a class="btn" href="contact.html">Get a quote</a><a class="btn ghost" href="tel:+{PHONE1_WA}">Call {PHONE1_D}</a></div></div></section>'''
+<a class="btn" href="contact.html">Get a quote</a><a class="btn ghost" href="tel:+{PHONE1_WA}">Call {PHONE1_D}</a>{f'<a class="btn ghost" href="mailto:{EMAIL}">{EMAIL}</a>' if EMAIL else ''}</div></div></section>'''
 
 STANDARDS = ('Our play equipment carries EN 1176 and ASTM international safety certifications and Korea\'s KC certification '
              'for children\'s products. Every installation is planned with safety zones and impact-absorbing '
@@ -766,7 +766,7 @@ a_body = page_hero('About Inori Kids', 'World-class play and landscape solutions
     'dramatic-circle-2', 'Curved community lounge pavilion lit at night', [('contact.html', 'Talk to us', ''), ('projects.html', 'See projects', 'ghost')]) + \
  sec(f'''<div class="prose"><div class="col"><h2>What we do</h2><p>Developers, schools, malls and hotels deal with one accountable team in India, from the first sketch to handover: design, import, installation, safety surfacing, warranty and after-sales.</p>
 <p>We are based in Gurugram, Haryana, and take on projects across India. Our first projects are bespoke concepts for residential developers, each designed around the developer\'s design intent.</p></div>
-<div class="col"><h2>Who to talk to</h2><ul><li><strong>{C1N}</strong>: {PHONE1_D}</li><li><strong>{C2N}</strong>: {PHONE2_D}</li></ul>
+<div class="col"><h2>Who to talk to</h2><ul><li><strong>{C1N}</strong>: {PHONE1_D}</li><li><strong>{C2N}</strong>: {PHONE2_D}</li>{f'<li><strong>Email</strong>: <a href="mailto:{EMAIL}">{EMAIL}</a></li>' if EMAIL else ''}</ul>
 <p>Follow our work on <a href="{IG}" target="_blank" rel="noopener">Instagram</a> and <a href="{LI}" target="_blank" rel="noopener">LinkedIn</a>.</p></div></div>''', top=False) + \
  awards_section(top=False, band=False) + \
  sec('''<div class="trust"><span>EN 1176</span><span>ASTM</span><span>KC</span><span>ISO</span><span>Red Dot Design Award</span><span>iF Design Award</span><span>Asia Design Prize</span><span>Good Design Award</span></div>''', top=False) + cta()
@@ -814,7 +814,7 @@ c_body = f'''<section class="page-hero"><div class="wrap enq">
   </form>
 </div></section>'''
 page('contact.html', 'Get a Quote for a Kids Play Area or Open Gym | Inori Kids',
-     f'Request a quote for a kids play area, indoor play area, landscape furniture, kids furniture or outdoor gym in India. Call {C1N} on {PHONE1_D} or {C2N} on {PHONE2_D}.',
+     f'Request a quote for a kids play area, indoor play area, landscape furniture, kids furniture or outdoor gym in India. Call {C1N} on {PHONE1_D} or {C2N} on {PHONE2_D}' + (f', or email {EMAIL}.' if EMAIL else '.'),
      c_body, [{'@type': 'ContactPage', 'name': 'Contact Inori Kids', 'url': url('contact.html')}],
      trail=[('index.html', 'Home'), ('contact.html', 'Get a quote')])
 
