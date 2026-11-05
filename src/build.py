@@ -73,7 +73,7 @@ def dims(name):
 def img(name, alt, eager=False):
     w, h = dims(name)
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-    return f'<img src="img/{name}.webp" alt="{E(alt)}" width="{w}" height="{h}" {load}>'
+    return f'<img src="/img/{name}.webp" alt="{E(alt)}" width="{w}" height="{h}" {load}>'
 
 MARK = ('<svg viewBox="0 0 100 120" aria-hidden="true"><polygon points="50,0 34,16 50,32" fill="var(--sun)"/>'
         '<polygon points="50,0 66,16 50,32" fill="var(--sun-light)"/><polygon points="34,40 50,48 50,120 34,112" fill="var(--accent)"/>'
@@ -91,7 +91,11 @@ NAV = [
 ]
 
 def url(slug):
-    return SITE + '/' if slug == 'index.html' else f'{SITE}/{slug}'
+    return SITE + '/' if slug == 'index.html' else f'{SITE}/{slug[:-5] if slug.endswith(".html") else slug}'
+
+def clean_links(doc):
+    doc = doc.replace('href="./"', 'href="/"').replace('href="index.html"', 'href="/"')
+    return re.sub(r'href="([a-z0-9-]+)\.html(#[^"]*)?"', lambda m: f'href="/{m.group(1)}{m.group(2) or ""}"', doc)
 
 ORG_ID = SITE + '/#organization'
 ORG = {
@@ -208,21 +212,21 @@ def page(slug, title, desc, body, graph, trail=None, ogimg='og-image.jpg', ogtyp
 <meta property="og:image" content="{og}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203A">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
 {ld}
 </script>
 </head>
 <body>
 '''
-    doc = head + header(slug) + '\n' + crumb_html + '\n<main id="main">\n' + body + '\n</main>\n' + footer() + '\n<script src="assets/main.js" defer></script>\n</body>\n</html>\n'
-    open(f'{OUT}/{slug}', 'w').write(doc)
+    doc = head + header(slug) + '\n' + crumb_html + '\n<main id="main">\n' + body + '\n</main>\n' + footer() + '\n<script src="/assets/main.js" defer></script>\n</body>\n</html>\n'
+    open(f'{OUT}/{slug}', 'w').write(clean_links(doc))
     PAGES.append((slug, title, desc))
 
 PAGES = []
