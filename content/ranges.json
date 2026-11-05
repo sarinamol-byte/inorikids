@@ -117,15 +117,15 @@
     {
       "title": "Play cafés and family centres",
       "text": "Kids cafés and family play centres with play, seating and parent areas planned together. Our partners have designed municipal kids cafés in Seoul.",
-      "image": "",
-      "image_description": "",
+      "image": "img/play-cafe-treehouse.jpg",
+      "image_description": "Kids café with a timber tree canopy, play house and yellow camper-van play structure",
       "label": ""
     },
     {
       "title": "Interactive and digital play",
       "text": "Smart play content and interactive learning play, including coding play, for edutainment centres and libraries.",
-      "image": "",
-      "image_description": "",
+      "image": "img/interactive-play-pillar.jpg",
+      "image_description": "Child using an interactive play pillar in an indoor play space",
       "label": ""
     }
   ],
@@ -175,8 +175,8 @@
     {
       "title": "Shelters and stations",
       "text": "Bus and shuttle shelters, bicycle shelters and waiting stations for townships and campuses.",
-      "image": "",
-      "image_description": "",
+      "image": "img/station-shelter-glass.jpg",
+      "image_description": "Glazed station shelter with seating, steel and timber frame",
       "label": "Station series"
     },
     {
@@ -189,15 +189,15 @@
     {
       "title": "Smart street furniture",
       "text": "Smart benches, sharing booths and IoT-enabled street furniture for connected campuses and public spaces.",
-      "image": "",
-      "image_description": "",
+      "image": "img/smart-sharing-booth.jpg",
+      "image_description": "Smart sharing booth with LED lighting and digital displays",
       "label": ""
     },
     {
       "title": "Bollards, planters and enclosures",
       "text": "Bollards, planters and waste and recycling enclosures that keep a landscape consistent down to the details.",
-      "image": "",
-      "image_description": "",
+      "image": "img/bollards-planters-enclosures.jpg",
+      "image_description": "Ladybird and butterfly bollards, decorative posts, planters, stone seats and a recycling enclosure",
       "label": ""
     }
   ],
@@ -233,15 +233,15 @@
     {
       "title": "Smart fitness for children",
       "text": "App-connected fitness play that turns exercise into interactive games for children.",
-      "image": "",
-      "image_description": "",
+      "image": "img/kids-smart-fitness.jpg",
+      "image_description": "Character-themed children's fitness station with cross-trainer",
       "label": "Children"
     },
     {
       "title": "Fitness packages and layouts",
       "text": "Planned sets of stations for a society open gym, a jogging-track circuit or a park fitness zone, with surfacing and signage.",
-      "image": "",
-      "image_description": "",
+      "image": "img/fitness-park.webp",
+      "image_description": "Outdoor fitness park layout with stations along a running track",
       "label": ""
     }
   ],
@@ -277,15 +277,15 @@
     {
       "title": "Learning-space themes",
       "text": "Furniture sets for reading forests, block-play tables, art ateliers, maker spaces and role-play rooms.",
-      "image": "",
-      "image_description": "",
+      "image": "img/learning-space-classroom.jpg",
+      "image_description": "Preschool learning room with round tables, child chairs, art materials and role-play kitchen",
       "label": ""
     },
     {
       "title": "Library and play café furniture",
       "text": "Reading nooks, book displays and seating for toy libraries, little libraries and kids cafés.",
-      "image": "",
-      "image_description": "",
+      "image": "img/tree-library-reading-nook.jpg",
+      "image_description": "Tree-shaped library reading nook with bookshelves and soft seating",
       "label": ""
     }
   ]

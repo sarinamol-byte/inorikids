@@ -214,6 +214,31 @@
       "image": "img/award-good-design-inout.webp",
       "category": "outdoor",
       "title": "Good Design Award 2023 playground"
+    },
+    {
+      "image": "img/play-cafe-treehouse.jpg",
+      "category": "indoor",
+      "title": "Treehouse kids café"
+    },
+    {
+      "image": "img/interactive-play-pillar.jpg",
+      "category": "indoor",
+      "title": "Interactive play pillar"
+    },
+    {
+      "image": "img/smart-sharing-booth.jpg",
+      "category": "pavilion",
+      "title": "Smart sharing booth"
+    },
+    {
+      "image": "img/learning-space-classroom.jpg",
+      "category": "furniture",
+      "title": "Preschool learning room"
+    },
+    {
+      "image": "img/tree-library-reading-nook.jpg",
+      "category": "furniture",
+      "title": "Tree library reading nook"
     }
   ]
 }
