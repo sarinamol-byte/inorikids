@@ -1,0 +1,68 @@
+{
+  "photos": [
+    {
+      "image": "img/artistic-playground-reddot.webp",
+      "award": "Red Dot Award 2024",
+      "project": "Artistic playground",
+      "description": "Red spiral net playground with a tall red canopy in a residential courtyard"
+    },
+    {
+      "image": "img/arcloud-reddot.webp",
+      "award": "Red Dot Award 2024",
+      "project": "Arcloud",
+      "description": "Illuminated cloud-shaped canopy structure at night"
+    },
+    {
+      "image": "img/award-presidential-sanmaru.webp",
+      "award": "Presidential Award 2019",
+      "project": "Sanmaru Playground",
+      "description": "Orange multi-storey play tower seen from below"
+    },
+    {
+      "image": "img/award-good-design-teahouse.webp",
+      "award": "Good Design Award 2023",
+      "project": "Teahouse",
+      "description": "Glazed teahouse pavilion among apartment towers"
+    },
+    {
+      "image": "img/award-good-design-inout.webp",
+      "award": "Good Design Award 2023",
+      "project": "Playground",
+      "description": "Timber and black steel play tower with long slide on green surfacing"
+    }
+  ],
+  "awards": [
+    {
+      "award": "Red Dot Design Award",
+      "details": "2024 winner for an artistic playground and for Arcloud; \"Best of the Best\" in 2012; product award 2014; winner for Anytime Playground at Raemian One Bailey"
+    },
+    {
+      "award": "Presidential Award, Korea",
+      "details": "2019, for Sanmaru Playground"
+    },
+    {
+      "award": "iF Product Design Award",
+      "details": "2014 winner"
+    },
+    {
+      "award": "Asia Design Prize",
+      "details": "2018 winner"
+    },
+    {
+      "award": "Good Design Award",
+      "details": "20 awards, including a teahouse and a playground in 2023, the \"Sky Hope\" playground tower and \"Where Wind Stays\" book café in 2016, and outdoor fitness equipment in 2015"
+    },
+    {
+      "award": "IDEA Award",
+      "details": "Winner"
+    },
+    {
+      "award": "Seoul Mayor's Award",
+      "details": "2016, Landscape Architect Day"
+    },
+    {
+      "award": "Eco-friendly playground",
+      "details": "Recognised 8 times"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+name: Build and publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build tools
+        run: pip install -r requirements.txt
+
+      - name: Build the website
+        run: python src/build.py
+
+      - name: Publish the built site to the "live" branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: live
+          publish_dir: ./dist
+          force_orphan: true
+          commit_message: "Publish site"
+
+      - name: Tell Hostinger to pull the new version
+        env:
+          HOOK: ${{ secrets.HOSTINGER_WEBHOOK }}
+        run: |
+          if [ -n "$HOOK" ]; then curl -fsS -X POST "$HOOK"; else echo "HOSTINGER_WEBHOOK not set yet, skipping"; fi

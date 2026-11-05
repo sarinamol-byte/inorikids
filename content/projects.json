@@ -1,0 +1,199 @@
+{
+  "items": [
+    {
+      "image": "img/unicorn.webp",
+      "category": "outdoor",
+      "title": "Unicorn sculptural climber"
+    },
+    {
+      "image": "img/reindeer.webp",
+      "category": "outdoor",
+      "title": "Blue Reindeer play tower"
+    },
+    {
+      "image": "img/pinecones.webp",
+      "category": "outdoor",
+      "title": "Playing with Pinecones play ring"
+    },
+    {
+      "image": "img/tiger.webp",
+      "category": "outdoor",
+      "title": "White Tiger play structure"
+    },
+    {
+      "image": "img/ant-tower.webp",
+      "category": "outdoor",
+      "title": "Ant Colony net play frame"
+    },
+    {
+      "image": "img/lookout.webp",
+      "category": "outdoor",
+      "title": "Lookout tower with in-ground trampoline"
+    },
+    {
+      "image": "img/blossom-aerial.webp",
+      "category": "outdoor",
+      "title": "Blossom courtyard kids play area"
+    },
+    {
+      "image": "img/in-net-tree.webp",
+      "category": "indoor",
+      "title": "Net treehouse indoor play hall"
+    },
+    {
+      "image": "img/in-spiral-tower.webp",
+      "category": "indoor",
+      "title": "Spiral net tower in an atrium"
+    },
+    {
+      "image": "img/in-tree-pillar.webp",
+      "category": "indoor",
+      "title": "Tree pillar toddler zone"
+    },
+    {
+      "image": "img/in-cloud-slide.webp",
+      "category": "indoor",
+      "title": "Cloud tree with tube slides"
+    },
+    {
+      "image": "img/in-hedges.webp",
+      "category": "indoor",
+      "title": "Hedge maze soft play"
+    },
+    {
+      "image": "img/in-trampoline.webp",
+      "category": "indoor",
+      "title": "Indoor trampolines and net bridge"
+    },
+    {
+      "image": "img/indoor-tree-slide-childcare.webp",
+      "category": "indoor",
+      "title": "Childcare centre play room with timber tree and slides"
+    },
+    {
+      "image": "img/dramatic-circle.webp",
+      "category": "pavilion",
+      "title": "Dramatic Circle community lounge pavilion"
+    },
+    {
+      "image": "img/dramatic-circle-2.webp",
+      "category": "pavilion",
+      "title": "Dramatic Circle at night"
+    },
+    {
+      "image": "img/pinecone-treehouse.webp",
+      "category": "pavilion",
+      "title": "Pine Cone Tree House"
+    },
+    {
+      "image": "img/flower-petal.webp",
+      "category": "pavilion",
+      "title": "Flower Petal Garden canopy"
+    },
+    {
+      "image": "img/wormhole-teahouse.webp",
+      "category": "pavilion",
+      "title": "Wormhole Tea House"
+    },
+    {
+      "image": "img/wormhole-cafe.webp",
+      "category": "pavilion",
+      "title": "Wormhole Terrace Cafe"
+    },
+    {
+      "image": "img/greenery-house.webp",
+      "category": "pavilion",
+      "title": "Greenery House"
+    },
+    {
+      "image": "img/ocean-pergola.webp",
+      "category": "pavilion",
+      "title": "Ocean Scent Pergola"
+    },
+    {
+      "image": "img/glass-pavilion.webp",
+      "category": "pavilion",
+      "title": "Glass garden pavilion"
+    },
+    {
+      "image": "img/cw-pavilion.webp",
+      "category": "pavilion",
+      "title": "Garden lounge pavilion"
+    },
+    {
+      "image": "img/yellow-pergola.webp",
+      "category": "pavilion",
+      "title": "Curved slat pergola"
+    },
+    {
+      "image": "img/low-bench.webp",
+      "category": "pavilion",
+      "title": "Patterned low bench"
+    },
+    {
+      "image": "img/fit-plus.webp",
+      "category": "fitness",
+      "title": "Outdoor gym stations"
+    },
+    {
+      "image": "img/flexo-senior.webp",
+      "category": "fitness",
+      "title": "Senior fitness stations"
+    },
+    {
+      "image": "img/cw-fitness-frame.webp",
+      "category": "fitness",
+      "title": "Fitness frames along a garden walk"
+    },
+    {
+      "image": "img/fitness-park.webp",
+      "category": "fitness",
+      "title": "Outdoor fitness park"
+    },
+    {
+      "image": "img/kids-play-kitchen-furniture.webp",
+      "category": "furniture",
+      "title": "Preschool play kitchen furniture"
+    },
+    {
+      "image": "img/laflaf-kids-room-furniture.webp",
+      "category": "furniture",
+      "title": "Kids room furniture"
+    },
+    {
+      "image": "img/laf-house-climbing-bed.webp",
+      "category": "furniture",
+      "title": "Climbing play house"
+    },
+    {
+      "image": "img/preschool-classroom-furniture.webp",
+      "category": "furniture",
+      "title": "Preschool furniture"
+    },
+    {
+      "image": "img/artistic-playground-reddot.webp",
+      "category": "outdoor",
+      "title": "Red Dot Award 2024 artistic playground"
+    },
+    {
+      "image": "img/arcloud-reddot.webp",
+      "category": "pavilion",
+      "title": "Red Dot Award 2024 Arcloud canopy"
+    },
+    {
+      "image": "img/award-presidential-sanmaru.webp",
+      "category": "outdoor",
+      "title": "Presidential Award 2019 Sanmaru Playground"
+    },
+    {
+      "image": "img/award-good-design-teahouse.webp",
+      "category": "pavilion",
+      "title": "Good Design Award 2023 teahouse"
+    },
+    {
+      "image": "img/award-good-design-inout.webp",
+      "category": "outdoor",
+      "title": "Good Design Award 2023 playground"
+    }
+  ]
+}

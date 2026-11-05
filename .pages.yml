@@ -1,0 +1,122 @@
+# Pages CMS configuration for inorikids.com — https://pagescms.org
+# Every save commits to GitHub; the "Build and publish" action then rebuilds the site.
+media:
+  input: static/img
+  output: img
+
+content:
+  - name: projects
+    label: Project gallery
+    type: file
+    path: content/projects.json
+    format: json
+    fields:
+      - name: items
+        label: Photos (first ones show first)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: image
+            label: Photo
+            type: image
+          - name: title
+            label: Caption
+            type: string
+            required: true
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - { value: outdoor, label: Outdoor play }
+                - { value: indoor, label: Indoor play }
+                - { value: pavilion, label: Pavilions and furniture }
+                - { value: fitness, label: Outdoor gym }
+                - { value: furniture, label: Kids furniture }
+
+  - name: guides
+    label: Guides and articles
+    type: collection
+    path: content/guides
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Title (shown as the page heading and in Google)
+        type: string
+        required: true
+      - name: description
+        label: Short summary (about 150 characters, shown in Google results)
+        type: text
+      - name: date
+        label: Date
+        type: date
+      - name: image
+        label: Main photo
+        type: image
+      - name: draft
+        label: Draft (tick to keep it off the website)
+        type: boolean
+      - name: body
+        label: Article
+        type: rich-text
+
+  - name: faqs
+    label: FAQs
+    type: file
+    path: content/faqs.json
+    format: json
+    fields:
+      - { name: home, label: Home page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: outdoor_play, label: Outdoor play areas page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: indoor_play, label: Indoor play areas page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: landscape_furniture, label: Landscape furniture page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: outdoor_gym, label: Outdoor gym page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: kids_furniture, label: Kids furniture page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: bespoke_design, label: Bespoke design page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+      - { name: planning_guide, label: Planning guide page, type: object, list: { collapsible: { collapsed: true, summary: "{fields.question}" } }, fields: [ { name: question, type: string }, { name: answer, type: text } ] }
+
+  - name: awards
+    label: Awards
+    type: file
+    path: content/awards.json
+    format: json
+    fields:
+      - name: photos
+        label: Award photos (5 look best)
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.award} · {fields.project}" } }
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: award, label: Award and year, type: string }
+          - { name: project, label: Project name, type: string }
+          - { name: description, label: Photo description (for Google and screen readers), type: string }
+      - name: awards
+        label: Award list
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{fields.award}" } }
+        fields:
+          - { name: award, label: Award, type: string }
+          - { name: details, label: Details, type: text }
+
+  - name: settings
+    label: Contact details and links
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - { name: contact1_name, label: First contact name, type: string }
+      - { name: contact1_phone, label: "First contact phone (format: +91 96504 41666)", type: string }
+      - { name: contact2_name, label: Second contact name, type: string }
+      - { name: contact2_phone, label: Second contact phone, type: string }
+      - { name: email, label: Email address (leave empty to hide), type: string }
+      - { name: instagram, label: Instagram link, type: string }
+      - { name: linkedin, label: LinkedIn link, type: string }
+      - { name: video, label: Process video link (YouTube), type: string }
