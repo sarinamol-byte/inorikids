@@ -39,4 +39,17 @@
       f.appendChild(box);box.querySelector('a').focus();
     });
   }
+  // Analytics events (only sent when Google Analytics is switched on)
+  function track(name,params){try{if(typeof window.gtag==='function')window.gtag('event',name,params||{})}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
+    var where={page:location.pathname,link_text:(a.textContent||'').trim().slice(0,60)};
+    if(h.indexOf('wa.me/')>-1)track('whatsapp_click',where);
+    else if(h.indexOf('tel:')===0)track('phone_click',where);
+    else if(h.indexOf('mailto:')===0)track('email_click',where);
+    else if(/\/contact$|contact\.html$/.test(h))track('quote_button_click',where);
+  });
+  if(f){f.addEventListener('submit',function(){if(!f.querySelector('[required]:invalid')){
+    var lines=[].slice.call(f.querySelectorAll('input[name=line]:checked')).map(function(c){return c.value}).join(', ');
+    var t=document.getElementById('q-type');track('generate_lead',{project_type:t?t.value:'',interested_in:lines});}});}
 })();

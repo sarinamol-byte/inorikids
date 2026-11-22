@@ -27,7 +27,7 @@ SETTINGS = load('settings.json', {
     'contact1_name': 'Amol Sarin', 'contact1_phone': '+91 96504 41666',
     'contact2_name': 'Hosung Yoo', 'contact2_phone': '+91 78880 02985',
     'email': '', 'instagram': 'https://www.instagram.com/i_norikids/',
-    'linkedin': 'https://www.linkedin.com/company/inorikids/', 'video': 'https://youtu.be/huSECLJfJdI'})
+    'linkedin': 'https://www.linkedin.com/company/inorikids/', 'video': 'https://youtu.be/huSECLJfJdI', 'ga4_id': ''})
 
 def phone_forms(d):
     digits = re.sub(r'\D', '', d)
@@ -40,6 +40,10 @@ EMAIL = SETTINGS.get('email', '').strip()
 IG = SETTINGS['instagram']
 LI = SETTINGS['linkedin']
 VIDEO = SETTINGS['video']
+GA4 = re.sub(r'[^A-Z0-9-]', '', (SETTINGS.get('ga4_id') or '').strip().upper())
+GA4_TAG = (f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GA4}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA4}');</script>
+''' if GA4.startswith('G-') else '')
 
 # ---------- prepare output: static files + images (any upload becomes optimised WebP) ----------
 shutil.rmtree(OUT, ignore_errors=True)
@@ -219,6 +223,7 @@ def page(slug, title, desc, body, graph, trail=None, ogimg='og-image.jpg', ogtyp
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="/assets/styles.css">
+{GA4_TAG}
 <script type="application/ld+json">
 {ld}
 </script>

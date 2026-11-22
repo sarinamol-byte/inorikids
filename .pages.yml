@@ -183,3 +183,4 @@ content:
       - { name: instagram, label: Instagram link, type: string }
       - { name: linkedin, label: LinkedIn link, type: string }
       - { name: video, label: Process video link (YouTube), type: string }
+      - { name: ga4_id, label: "Google Analytics measurement ID (starts with G-, leave empty to switch off)", type: string }
