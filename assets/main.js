@@ -1,0 +1,55 @@
+(function(){
+  // Gallery filters + lightbox (projects page)
+  var g=document.getElementById('gallery');
+  if(g){
+    var btns=document.querySelectorAll('.filters button');
+    btns.forEach(function(b){b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+      g.querySelectorAll('.gitem').forEach(function(p){p.hidden=!(b.dataset.f==='all'||p.dataset.c===b.dataset.f)});
+    })});
+    var lb=document.getElementById('lb'),li=document.getElementById('lb-img'),lc=document.getElementById('lb-cap'),last=null;
+    g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;last=b;var im=b.querySelector('img');li.src=im.src;li.alt=im.alt;var fc=b.parentNode.querySelector('figcaption b');lc.textContent=fc?fc.textContent:im.alt;if(b.dataset.sub){var sp=document.createElement('span');sp.textContent=b.dataset.sub;lc.appendChild(sp)}lb.hidden=false;document.getElementById('lb-close').focus()});
+    function close(){lb.hidden=true;if(last)last.focus()}
+    document.getElementById('lb-close').addEventListener('click',close);
+    lb.addEventListener('click',function(e){if(e.target===lb)close()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});
+  }
+  // Enquiry form -> WhatsApp hand-off (works on any static host, no server needed)
+  var f=document.getElementById('enq-form');
+  if(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var err=document.getElementById('q-err');
+      var req=[].slice.call(f.querySelectorAll('[required]'));
+      var bad=req.filter(function(i){return !i.value.trim()||!i.checkValidity()});
+      if(bad.length){err.textContent='Please fill in your name, organisation, phone and a valid email.';bad[0].focus();return}
+      err.textContent='';
+      var v=function(id){var el=document.getElementById(id);return el?el.value.trim():''};
+      var lines=[].slice.call(f.querySelectorAll('input[name=line]:checked')).map(function(c){return c.value}).join(', ');
+      var msg='New enquiry from inorikids.com%0A'+
+        ['Name: '+v('q-name'),'Organisation: '+v('q-org'),'Phone: '+v('q-phone'),'Email: '+v('q-email'),
+         'Project type: '+v('q-type'),'City: '+v('q-city'),'Interested in: '+(lines||'-'),
+         'Area (sq ft): '+(v('q-area')||'-'),'Timeline: '+v('q-when'),'Details: '+(v('q-msg')||'-')]
+        .map(encodeURIComponent).join('%0A');
+      var box=f.querySelector('.send');if(box)box.remove();
+      box=document.createElement('div');box.className='send';box.setAttribute('role','status');
+      box.innerHTML='<p><strong>Almost done.</strong> Tap below to send these details to our team on WhatsApp.</p>'+
+        '<div class="acts"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+f.dataset.wa1+'?text='+msg+'">Send to '+f.dataset.name1+' on WhatsApp</a>'+
+        '<a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/'+f.dataset.wa2+'?text='+msg+'">Send to '+f.dataset.name2+'</a></div>';
+      f.appendChild(box);box.querySelector('a').focus();
+    });
+  }
+  // Analytics events (only sent when Google Analytics is switched on)
+  function track(name,params){try{if(typeof window.gtag==='function')window.gtag('event',name,params||{})}catch(e){}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'';
+    var where={page:location.pathname,link_text:(a.textContent||'').trim().slice(0,60)};
+    if(h.indexOf('wa.me/')>-1)track('whatsapp_click',where);
+    else if(h.indexOf('tel:')===0)track('phone_click',where);
+    else if(h.indexOf('mailto:')===0)track('email_click',where);
+    else if(/\/contact$|contact\.html$/.test(h))track('quote_button_click',where);
+  });
+  if(f){f.addEventListener('submit',function(){if(!f.querySelector('[required]:invalid')){
+    var lines=[].slice.call(f.querySelectorAll('input[name=line]:checked')).map(function(c){return c.value}).join(', ');
+    var t=document.getElementById('q-type');track('generate_lead',{project_type:t?t.value:'',interested_in:lines});}});}
+})();
